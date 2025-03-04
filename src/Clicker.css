@@ -1,0 +1,36 @@
+.clicker-container {
+    position: relative;
+    min-height: calc(100vh - 60px); /* учитываем высоту шапки */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clicker-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000; /* чёрная кнопка */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* закругленные края */
+    cursor: pointer;
+  }
+  
+  .clicker-button:hover {
+    opacity: 0.8;
+  }
+  
+  .clicker-count {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .clicker-image {
+    position: absolute;
+    width: 200px; /* зафиксировали ширину */
+    height: auto;
+    transition: opacity 0.3s;
+    pointer-events: none; /* чтобы картинка не мешала кликам */
+  }
+  

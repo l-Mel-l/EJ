@@ -1,0 +1,8 @@
+.App {
+    background-color: #bebae7; /* Серый фон для всего сайта */
+    min-height: 100vh;
+  }
+  
+  html, body {
+    overflow: hidden;
+  }
