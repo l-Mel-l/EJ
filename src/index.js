@@ -4,5 +4,6 @@ import App from './app2';
 
 
 const app = ReactDOMClient.createRoot(document.getElementById('root'));
+//asasasasas
 
 app.render(<App />);
