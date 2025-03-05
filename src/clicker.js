@@ -3,13 +3,11 @@ import './Clicker.css';
 
 function Clicker() {
   const [count, setCount] = useState(0);
-  const [instances, setInstances] = useState([]); // Массив объектов с данными для картинки и аудио
+  const [instances, setInstances] = useState([]);
 
-  // Размер картинки (ширина)
   const imgWidth = 80;
   const imgHeight = 80;
 
-  // Функция для генерации случайной позиции с учетом размеров картинки
   const getRandomPosition = () => {
     const maxX = window.innerWidth - imgWidth-150;
     const maxY = window.innerHeight - imgHeight-150;
@@ -22,14 +20,11 @@ function Clicker() {
     setCount(prev => prev + 1);
     const { x, y } = getRandomPosition();
 
-    // Создаем уникальный id для картинки (например, с помощью времени)
     const id = Date.now();
     const newInstance = { id, x, y };
 
-    // Добавляем новый экземпляр в массив
     setInstances(prev => [...prev, newInstance]);
 
-    // Через 2 секунды удаляем эту картинку
     setTimeout(() => {
         setInstances(prev => prev.filter(instance => instance.id !== id));
       }, 5000);
